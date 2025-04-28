@@ -357,3 +357,9 @@ body {
     color: rgb(194, 192, 192);
     margin-top: 100px;
 }
+
+@media only screen and (max-width: 767px) {
+    .contenedorCajas {
+        flex-direction: column;
+    }    
+}
