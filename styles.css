@@ -7,9 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1c1c1c;
+    background-color: black;
     color: white;
-    overflow: hidden; /* Evita el scroll si el contenido se desborda */
 }
 
 /* Caja principal */
@@ -25,26 +24,26 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 90vh;
     z-index: -1; /* El video está en el fondo */
 }
 
 .video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+    object-fit: cover;
+    filter: brightness(0.5); /* Asegura que el video cubra toda la pantalla */
 }
 
 /* Superposición de contenido sobre el video */
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     color: white;
@@ -95,7 +94,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #ff8c00;
+    color: grey;
 }
 
 .btn-play {
@@ -135,4 +134,226 @@ body {
     margin-right: 1000px;
     margin-bottom: 500px;
     font-family: 'Georgia', serif;
+}
+
+.footer {
+    width: 100%;
+    background-color: black;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footerLogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footerLogo {
+    height: 40px;
+}
+
+.footerText {
+    color: white;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.mapa {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: -150px;
+    margin: 50px 0 0 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.mapa img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+.contenedorCajas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: -140px;
+    margin-bottom: -150px;
+    background-color: transparent;
+}
+
+.caja {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.caja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.textoSobreImagen {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-align: left;
+    z-index: 2;
+    font-family: 'Georgia', serif;
+}
+
+.textoSobreImagen .fecha {
+    font-size: 18px;
+    color: #e2dddd;
+    margin-bottom: 5px;
+}
+
+.textoSobreImagen .titulo {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: 'Georgia', serif;
+}
+
+.contenidoMapa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.tituloMapa {
+    font-size: 100px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: rgb(194, 192, 192);
+    margin-top: 100px;
+}
+
+.descripcionMapa {
+    color: grey;
+    font-size: 30px;
+    font-family: 'Georgia', serif;
+    max-width: 800px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.aQuienVasAElegir {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: -150px;
+    margin: 50px 0 0 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.aQuienVasAElegir img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+.botonDeVerHeroes {
+    display: inline-block;
+    padding: 12px 30px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.botonDeVerHeroes:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.internacionalDota {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.internacionalDota img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.uneteALaBatalla {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.uneteALaBatalla img{
+    width: 100%;
+    height: 500px;
+}
+
+.contenidoBloodSeeker {
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.tituloBloodSeeker {
+    font-size: 90px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: rgb(194, 192, 192);
+    margin-top: 100px;
 }
